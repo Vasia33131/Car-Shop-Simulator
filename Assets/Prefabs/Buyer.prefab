@@ -537,9 +537,10 @@ GameObject:
   - component: {fileID: 8702907024794224853}
   - component: {fileID: 8205888508818640480}
   - component: {fileID: 968187783643384560}
+  - component: {fileID: -3792831277623597084}
   m_Layer: 0
   m_Name: Buyer
-  m_TagString: Untagged
+  m_TagString: 'NPC '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8920226118049176813}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.487, y: 0.412, z: -8.651}
   m_LocalScale: {x: 0.12474816, y: 0.12474816, z: 0.12474816}
   m_ConstrainProportionsScale: 0
@@ -563,7 +564,7 @@ Transform:
   - {fileID: 1766035019916056551}
   - {fileID: 3824524398383949675}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &8702907024794224853
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -635,3 +636,37 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3792831277623597084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8920226118049176813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f210cf1f6f697684c898efbb1158f91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 1.5
+  _rotationSpeed: 10
+  _stoppingDistance: 0.5
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  _groundCheckHeight: 2
+  _groundCheckDistance: 10
+  _groundOffset: 0
+  _obstacleMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  _collisionPadding: 0.02
+  _fallbackHeight: 1.8
+  _fallbackRadius: 0.25
+  _facingYawOffset: 180
+  _swayAngle: 45.79
+  _swaySpeed: 8
+  _headAnchor: {fileID: 3824524398383949675}
+  _inspectDuration: {x: 2, y: 3}
+  _leaveTimeout: 8
+  _despawnImmediatelyAfterPay: 1
